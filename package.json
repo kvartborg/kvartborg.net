@@ -1,0 +1,38 @@
+{
+  "name": "kvartborg.net",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^8.2.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-react-jsx": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "css-loader": "^0.28.11",
+    "express": "^4.16.3",
+    "file-loader": "^1.1.6",
+    "highlight.js": "^9.12.0",
+    "postcss-css-variables": "^0.8.0",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.1.3",
+    "postcss-media-variables": "^2.0.1",
+    "preact": "^8.2.7",
+    "preact-async-route": "^2.1.1",
+    "preact-router": "^2.6.0",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.5.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.0.14"
+  }
+}
