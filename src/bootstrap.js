@@ -2,13 +2,14 @@ import { h, render } from 'preact'
 import Routes from './Routes'
 import './base.css'
 
-global.h = h
-
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('/service-worker.js')
+      .catch(() => {})
   })
 }
+
+global.h = h
 
 const Main = () => (
   <Routes />

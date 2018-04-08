@@ -2,19 +2,23 @@ const path = require('path')
 const WorkboxPlugin = require('workbox-webpack-plugin')
 
 const outputDev = {
-  path: path.resolve('static/build'),
-  publicPath: '/build/',
+  path: path.resolve('build'),
+  publicPath: '/',
   filename: '[name].js'
 }
 
 const outputProduction = {
-  path: path.resolve('static/build'),
-  publicPath: '/build/',
+  path: path.resolve('build'),
+  publicPath: '/',
   filename: '[name].[chunkhash].js'
 }
 
 module.exports = {
-  entry: path.resolve('./src/bootstrap.js'),
+  entry: [
+    path.resolve('./src/bootstrap.js'),
+    path.resolve('./src/service-worker.js'),
+    path.resolve('./src/shell.html')
+  ],
   output: process.argv.includes('-p') ? outputProduction : outputDev,
   target: 'web',
   mode: 'development',
@@ -41,12 +45,23 @@ module.exports = {
       }, {
         test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
         loader: 'file-loader'
+      }, {
+        test: /\.(html)(\?.*$|$)/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+        ]
       }
     ]
   },
   plugins: [
     new WorkboxPlugin.InjectManifest({
-      swSrc: './static/sw.js'
+      swSrc: path.resolve('./src/service-worker.js'),
+      swDest: path.resolve('./build/service-worker.js')
     })
   ],
   devtool: 'source-map'
