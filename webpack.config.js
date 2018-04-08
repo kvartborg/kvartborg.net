@@ -1,4 +1,5 @@
 const path = require('path')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 
 const outputDev = {
   path: path.resolve('static/build'),
@@ -43,5 +44,10 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new WorkboxPlugin.InjectManifest({
+      swSrc: './static/sw.js'
+    })
+  ],
   devtool: 'source-map'
 }

@@ -1,0 +1,51 @@
+@import '../../variables.css';
+
+.profile {
+  min-height: calc(100vh - 50px - var(--spacing));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: var(--max-content-width);
+  margin: 0px auto;
+}
+
+.profile img {
+  width: 240px;
+  border-radius: 50%;
+  margin: var(--spacing) 0px;
+}
+
+.profile .social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2em;
+  margin: calc(var(--spacing) / 2) 0px;
+}
+
+.profile .social a {
+  color: var(--dark);
+}
+
+@media(min-width: 750px) {
+
+  .profile {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .profile center {
+    min-width: 240px;
+    display: inline-block;
+  }
+
+  .profile > div {
+    padding-left: var(--spacing);
+    display: inline-block;
+  }
+
+  .profile .social {
+    justify-content: space-between;
+    width: 60%;
+  }
+}

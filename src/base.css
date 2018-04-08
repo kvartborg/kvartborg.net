@@ -1,7 +1,72 @@
-:root {
-  --red: red;
+@import './variables';
+
+*,*:before,*:after {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--red);
+  font-family: gesta, sans-serif;
+  font-size: 16px;
+  line-height: 1.8em;
+  color: var(--dark);
+  background: var(--bg);
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+  overflow-x: hidden;
+}
+
+.wrapper {
+  margin: 0px auto;
+  max-width: var(--max-content-width);
+  padding: var(--spacing);
+  padding-bottom: calc(50px + var(--spacing));
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h2.subject {
+  font-size: 1.4em;
+  opacity: .6;
+  font-weight: 400;
+}
+
+a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+p {
+
+}
+
+img {
+  display: block;
+  margin: 0px auto;
+  max-width: 100%;
+}
+
+blockquote {}
+
+@media(min-width: 500px) {
+
+}
+
+@media(min-width: 1200px) {
+  .wrapper {
+    padding: 0px var(--spacing);
+    padding-top: calc(50px + var(--spacing));
+  }
 }
