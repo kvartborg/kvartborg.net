@@ -3,7 +3,7 @@
 /**
  * Precache page
  */
-workbox.precaching.precacheAndRoute(self.__precacheManifest)
+workbox.precaching.precacheAndRoute(self.__precacheManifest || [])
 
 /**
  * Cache js and css
