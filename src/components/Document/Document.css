@@ -1,0 +1,15 @@
+@import '../../variables.css';
+
+.document.loading {
+  min-height: calc(100vh - 50px - var(--spacing) * 2);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.document.loading i {
+  color: var(--grey);
+  display: block;
+  font-size: 1.6em;
+}

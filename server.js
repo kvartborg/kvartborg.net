@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 
 app.use(express.static('build'))
-// app.use('/docs', express.static('blog'))
+app.use('/static', express.static('static'))
 
 app.get('*', (req, res) => {
   res.set('Content-Type', 'text/html')

@@ -48,12 +48,19 @@ a {
   text-decoration: none;
 }
 
+code {
+  font: menlo, monospace;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: var(--grey);
+}
+
 p {
 
 }
 
 img {
-  display: block;
+  display: inline-block;
   margin: 0px auto;
   max-width: 100%;
 }

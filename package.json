@@ -23,7 +23,8 @@
     ]
   },
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "puppeteer": "^1.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
@@ -44,6 +45,7 @@
     "postcss-media-variables": "^2.0.1",
     "preact": "^8.2.7",
     "preact-async-route": "^2.1.1",
+    "preact-markdown": "^0.4.0",
     "preact-router": "^2.6.0",
     "snazzy": "^7.1.1",
     "standard": "^11.0.1",
