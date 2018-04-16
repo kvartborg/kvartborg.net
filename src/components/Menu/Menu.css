@@ -2,6 +2,7 @@
 
 menu {
   --height: 50px;
+  color: var(--dark);
   position: fixed;
   height: var(--height);
   line-height: var(--height);
@@ -15,6 +16,7 @@ menu {
   backdrop-filter: blur(8px);
   font-size: 1.4em;
   z-index: 2;
+  transition: color .3s;
 }
 
 menu ul {
@@ -31,7 +33,8 @@ menu ul li {
 }
 
 menu ul li a {
-  color: var(--dark);
+  color: inherit;
+  opacity: .5;
   font-weight: 400;
 }
 
@@ -43,7 +46,13 @@ menu ul li a .title {
 }
 
 menu ul li a.active {
-  color: var(--primary);
+  opacity: 1;
+}
+
+@media(max-width: 1200px) {
+  menu {
+    color: var(--dark) !important;
+  }
 }
 
 @media(min-width: 500px) {

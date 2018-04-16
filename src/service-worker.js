@@ -51,9 +51,19 @@ workbox.routing.registerRoute(
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 60,
-        maxAgeSeconds: 7 * 24 * 60 * 60 // 30 Days
+        maxAgeSeconds: 7 * 24 * 60 * 60 // 7 Days
       })
     ]
+  })
+)
+
+/**
+ * Cache json
+ */
+workbox.routing.registerRoute(
+  /\.(?:json)$/,
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'json-cache'
   })
 )
 

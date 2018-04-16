@@ -11,6 +11,10 @@ export default () => (
       getComponent={() => import('views/Blog').then(module => module.default)}
     />
     <AsyncRoute
+      path='/blog/:post'
+      getComponent={() => import('views/Blog/Post').then(module => module.default)}
+    />
+    <AsyncRoute
       path='/work'
       getComponent={() => import('views/Work').then(module => module.default)}
     />

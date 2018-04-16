@@ -18,14 +18,16 @@ body {
 }
 
 .wrapper {
-  margin: 0px auto;
-  max-width: var(--max-content-width);
-  padding: var(--spacing);
   padding-bottom: calc(50px + var(--spacing));
 }
 
-h1, h2, h3, h4, h5, h6 {
+section {
+  margin: 0px auto;
+  max-width: var(--max-content-width);
+  padding: 0px var(--spacing);
+}
 
+h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
@@ -67,13 +69,8 @@ img {
 
 blockquote {}
 
-@media(min-width: 500px) {
-
-}
-
 @media(min-width: 1200px) {
   .wrapper {
-    padding: 0px var(--spacing);
-    padding-top: calc(50px + var(--spacing));
+    margin-top: calc(var(--header-height) + var(--spacing));
   }
 }

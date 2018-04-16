@@ -8,6 +8,13 @@ export default class Menu extends Component {
     ['Work', 'fas fa-code-branch', '/work', true]
   ]
 
+  componentDidMount () {
+    const menu = document.querySelector('menu')
+    if (menu) {
+      menu.removeAttribute('style')
+    }
+  }
+
   render () {
     return (
       <menu>
