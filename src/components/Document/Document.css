@@ -20,6 +20,7 @@
 
 .document header {
   padding-top: var(--doc-header-height);
+  margin-bottom: var(--spacing);
 }
 
 .document header section {

@@ -6,9 +6,15 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  max-width: var(--max-content-width);
+  max-width: 800px;
   padding-top: var(--spacing);
   margin: 0px auto;
+}
+
+.profile h1,
+.profile h2 {
+  margin: 0px;
+  margin-top: calc(var(--spacing) / 6);
 }
 
 .profile img {

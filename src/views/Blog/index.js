@@ -43,8 +43,11 @@ export default class Blog extends Component {
 
     for (let i = 0; i < container.children.length; i++) {
       const order = (i + 1) % COL_COUNT || COL_COUNT
+      if (container.children[i].style.height === "") {
+        container.children[i].style.height = container.children[i].offsetHeight + 'px'
+      }
       container.children[i].style.order = order
-      col_heights[order] += parseFloat(container.children[i].offsetHeight)
+      col_heights[order] += parseFloat(container.children[i].style.height)
     }
 
     const highest = Math.max.apply(Math, col_heights)
