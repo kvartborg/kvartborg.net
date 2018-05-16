@@ -4,7 +4,7 @@ import preview from './video-preview.png'
 const Logo = () => (
   <svg class='logo' viewBox='0 0 180.42 85.02'>
     <defs>
-      <style>{'.a{fill:#fff;}'}</style>
+      <style>{'.a{fill:#da4626;}'}</style>
     </defs>
     <path class='a' d='M114.88,85V77.43h65.54V28.1h-40v9.37H114.88V7.59H77.42V0h-40V7.66H0v40H37.46V77.43H74.91V85h40ZM143,30.6h35V74.93H143V30.6ZM114.88,40h25.58v35H114.88V40ZM37.46,45.12H2.5v-35h35v35Zm40-35h35v35H77.42v-35Zm0,37.47h34.95v35h-35v-35ZM40,2.5h35v35H40V2.5Zm0,72.43V47.62h0V40H74.91v35H40Z' />
     <polygon class='a' points='26.32 33.32 17.4 33.32 17.4 28.82 24.9 28.82 24.9 24.79 17.4 24.79 17.4 20.39 26.32 20.39 26.32 16.32 12.77 16.32 12.77 37.38 26.32 37.38 26.32 33.32' />
@@ -26,13 +26,15 @@ export default () => (
           <img src={preview} />
           <button><i class='fas fa-play' /></button>
         </div>
-        <h2 class='subject'>
-          I was invovled in the EcoGrid 2.0 project when i worked at Uptime.
-          My primary task was to develop a progressive web application for the
-          households, to monitor and control their temperature flexibility.
-          <br /><br />
+        <div>
+          <h1>EcoGrid 2.0</h1>
+          <h2 class='subject'>
+            I was invovled in the EcoGrid 2.0 project when i worked at Uptime.
+            My primary task was to develop a progressive web application for the
+            households, to monitor and control their temperature flexibility.
+          </h2>
+        </div>
           {/* <a href='http://ecogrid.dk' target='_blank'>Read More</a> */}
-        </h2>
       </div>
       {/* <iframe src="https://player.vimeo.com/video/219810706" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> */}
     </section>

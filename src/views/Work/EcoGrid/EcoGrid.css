@@ -1,35 +1,40 @@
 @import  '../../../variables.css';
 
 .ecogrid {
-  background: #da4626;
-  color: white;
-  padding: calc(var(--spacing) * 2) 0px;
+  /* background: #fafafa; */
+  color: var(--dark);
+  padding: calc(var(--spacing) * 4) 0px;
 }
 
 .ecogrid section {
   max-width: 1000px;
 }
 
+.ecogrid h1 {
+  margin: 0px;
+}
+
+.ecogrid h2 {
+  margin: calc(var(--spacing) / 4) 0px;
+}
+
 .ecogrid .logo {
   width: 200px;
-  margin: 0px auto var(--spacing);
+  margin: 0px auto calc(var(--spacing) * 2);
   display: block;
 }
 
 .ecogrid .content {
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
-}
-
-.ecogrid .content h2 {
-  opacity: 0.8;
 }
 
 .ecogrid .content .preview {
   position: relative;
   max-width: 580px;
   min-width: 300px;
-  margin: var(--spacing) auto;
+  margin: var(--spacing) auto calc(var(--spacing) * 2);
 }
 
 .ecogrid .content .preview img {
@@ -69,12 +74,8 @@
   }
 
   .ecogrid .content .preview {
-    width: 45%;
-    margin: calc(var(--spacing) * 2);
-    margin-left: 0px;
-  }
-
-  .ecogrid .content h2 {
-    width: 55%;
+    min-width: 40%;
+    margin: 0px;
+    margin-right: calc(var(--spacing) * 2);
   }
 }

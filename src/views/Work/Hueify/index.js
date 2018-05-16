@@ -19,6 +19,7 @@ export default class Hueify extends Component {
               src={require('./hueify.mp4')}
               loop
               muted
+              playsinline
               autoPlay
             />
             <div>

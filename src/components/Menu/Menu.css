@@ -49,6 +49,12 @@ menu ul li a.active {
   opacity: 1;
 }
 
+@supports not (backdrop-filter: blur(8px)) {
+  menu {
+    background: white;
+  }
+}
+
 @media(max-width: 1200px) {
   menu {
     color: var(--dark) !important;

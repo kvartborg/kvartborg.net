@@ -5,7 +5,7 @@
 }
 
 .hueify h1 {
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 .hueify h2 {
@@ -22,12 +22,13 @@
   width: 100%;
   border-radius: var(--spacing);
   box-shadow: var(--shadow);
+  margin-bottom: calc(var(--spacing) * 2)
 }
 
 .hueify .content {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hueify .links {
@@ -50,7 +51,7 @@
   }
 
   .hueify video {
-    max-width: 42%;
+    max-width: 40%;
     margin-right: calc(var(--spacing) * 2);
   }
 }
