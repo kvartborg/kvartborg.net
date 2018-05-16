@@ -1,4 +1,3 @@
-import { Component } from 'preact'
 import Layout from 'components/Layout'
 import Document from 'components/Document'
 import './Blog.css'

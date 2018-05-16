@@ -1,6 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 const express = require('express')
+const camelcase = require('camelcase')
 const app = express()
 
 app.use(express.static('build'))
@@ -11,19 +12,19 @@ app.get('/blog/posts.json', (req, res) => {
   const posts = fs.readdirSync(POST_PATH)
   const result = []
 
-  for (post of posts) {
+  for (const post of posts) {
     const md = fs.readFileSync(path.resolve(POST_PATH, post)).toString('utf-8')
-    const [_, rawMeta] = md.split('---')
+    const [_, rawMeta] = md.split('---') //eslint-disable-line
     const metaItems = rawMeta.split('\n')
     const meta = {}
 
-    for (item of metaItems) {
+    for (const item of metaItems) {
       if (!item.includes(':')) {
         continue
       }
 
       const [key, ...value] = item.split(':')
-      meta[key.trim()] = value.join(':').trim()
+      meta[camelcase(key).trim()] = value.join(':').trim()
     }
 
     if (meta.published !== 'true') {

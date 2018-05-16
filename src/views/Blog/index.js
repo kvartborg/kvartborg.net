@@ -32,10 +32,10 @@ export default class Blog extends Component {
 
     return (
       <Layout>
-          <section class='blog-heading'>
-            <h1>Posts</h1>
-          </section>
-          <section class='blog-section'>
+        <section class='blog-heading'>
+          <h1>Posts</h1>
+        </section>
+        <section class='blog-section'>
           <div class={'blog ' + (animate !== null ? 'animate' : '')}>
             {posts.map((post, id) => this.renderPost(id, post))}
             {this.state.animate !== null && this.renderAnimationPost()}
@@ -45,10 +45,10 @@ export default class Blog extends Component {
     )
   }
 
-  renderPost (id, { title, description, cover_text_color, cover_color }) {
+  renderPost (id, { title, description, coverTextColor, coverColor }) {
     const style = {
-      color: cover_text_color,
-      background: cover_color
+      color: coverTextColor,
+      background: coverColor
     }
 
     const classes = ['post'].join(' ')
@@ -72,20 +72,20 @@ export default class Blog extends Component {
       (_, index) => index === this.state.animate
     )
 
-    const { title, description, cover_text_color, cover_color, url } = post
+    const { title, description, coverTextColor, coverColor, url } = post
 
     const el = document.getElementById(this.state.animate)
     const viewportOffset = el.getBoundingClientRect()
 
     const menu = document.querySelector('menu')
 
-    if (menu && cover_text_color) {
-      menu.style.color = cover_text_color
+    if (menu && coverTextColor) {
+      menu.style.color = coverTextColor
     }
 
     const style = {
-      color: cover_text_color,
-      background: cover_color,
+      color: coverTextColor,
+      background: coverColor
     }
 
     const initStyle = {
@@ -93,7 +93,6 @@ export default class Blog extends Component {
       height: el.offsetHeight,
       transform: `translate(${viewportOffset.left}px, ${viewportOffset.top}px)`
     }
-
 
     window.__postHeader = post
 

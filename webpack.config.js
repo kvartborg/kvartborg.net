@@ -16,7 +16,7 @@ const outputProduction = {
 module.exports = {
   entry: {
     main: path.resolve('./src/bootstrap.js'),
-    //vendor: ['preact', 'preact-router', 'preact-markdown', 'preact-async-route', 'highlight.js'],
+    // vendor: ['preact', 'preact-router', 'preact-markdown', 'preact-async-route', 'highlight.js'],
     sw: path.resolve('./src/service-worker.js'),
     shell: path.resolve('./src/shell.html')
   },

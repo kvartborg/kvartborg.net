@@ -1,6 +1,7 @@
 /* global fetch */
 import { Component } from 'preact'
 import Markdown from 'components/Markdown'
+import camelcase from 'camelcase'
 import './Document.css'
 
 export default class Document extends Component {
@@ -27,12 +28,12 @@ export default class Document extends Component {
   }
 
   parseDoc (doc) {
-    const [_, rawHeader, ...body] = doc.split('---')
+    const [_, rawHeader, ...body] = doc.split('---') //eslint-disable-line
     const header = {}
 
     for (const item of rawHeader.split('\n')) {
       const [key, ...value] = item.split(':')
-      header[key.trim()] = value.join(':').trim()
+      header[camelcase(key).trim()] = value.join(':').trim()
     }
 
     this.setState({
@@ -50,10 +51,10 @@ export default class Document extends Component {
     )
   }
 
-  renderHeader ({ title, description, cover_color, cover_text_color }) {
+  renderHeader ({ title, description, coverColor, coverTextColor }) {
     const style = {
-      background: cover_color,
-      color: cover_text_color
+      background: coverColor,
+      color: coverTextColor
     }
 
     if (!title) {
@@ -63,7 +64,7 @@ export default class Document extends Component {
     const menu = document.querySelector('menu')
 
     if (menu) {
-      menu.style.color = cover_text_color
+      menu.style.color = coverTextColor
     }
 
     return (

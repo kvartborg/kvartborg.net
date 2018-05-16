@@ -22,7 +22,7 @@ export default () => (
             </li>
             <li>
               <a href='https://github.com/kvartborg/hueify/releases/download/v0.1.1/Hueify.dmg'>
-                <i class="fas fa-download"></i> Download
+                <i class='fas fa-download' /> Download
               </a>
             </li>
           </ul>
