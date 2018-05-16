@@ -69,7 +69,7 @@ menu ul li a.active {
     position: absolute;
     top: 0px;
     font-size: 1.6em;
-    background: none;
+    background: transparent;
     backdrop-filter: none;
   }
 

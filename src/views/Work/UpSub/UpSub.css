@@ -52,7 +52,6 @@
   padding: var(--spacing) 0px;
   min-height: 840px;
   overflow: hidden;
-  border-bottom: solid 1px var(--grey-light);
 }
 
 .upsub .intro .planes {
@@ -74,6 +73,7 @@
   text-align: left;
   padding: calc(var(--spacing) * 2) 0px;
   z-index: 1;
+  box-shadow: inset 0px 0px 40px white;
 }
 
 .upsub .intro .content img {
