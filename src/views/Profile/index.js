@@ -9,7 +9,9 @@ export default () => (
       </center>
       <div>
         <h1>Hello!</h1>
-        <h2 class='subject'>I'm Frederik Kvartborg, a freelance Full-Stack Developer. I Design and Develop progressive web applications, based on the latest technology and standards.</h2>
+        <h2 class='subject'>
+          I'm Frederik. I design and develop software, primarily within the context of the web.<br />
+        </h2>
         <div class='social'>
           <a href='mailto:hello@kvartborg.net'><i class='fas fa-at' /></a>
           <a href='https://github.com/kvartborg' target='_blank'><i class='fab fa-github' /></a>

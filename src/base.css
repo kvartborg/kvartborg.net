@@ -38,12 +38,19 @@ h1 {
 
 h2 {
   font-size: 2em;
+  line-height: 1.4em;
 }
 
 h2.subject {
   font-size: 1.4em;
-  opacity: .6;
+  line-height: 1.4em;
+  opacity: .7;
   font-weight: 400;
+}
+
+h2.subject a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 a {

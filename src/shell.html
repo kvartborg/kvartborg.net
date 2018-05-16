@@ -4,12 +4,27 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0">
     <title>Frederik Kvartborg</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-KwxQKNj2D0XKEW5O/Y6haRH39PE/xry8SAoLbpbCMraqlX7kUP6KHOnrlrtvuJLR" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.typekit.net/oqz0pmk.css">
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-KwxQKNj2D0XKEW5O/Y6haRH39PE/xry8SAoLbpbCMraqlX7kUP6KHOnrlrtvuJLR" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/oqz0pmk.css"> -->
   </head>
   <body>
-    <div id='root'>
-    </div>
+    <div id='root'></div>
     <script src='/main.js'></script>
+    <script>
+      function loadStyles(styles) {
+        styles.forEach(function (style) {
+          var el = document.createElement("link")
+          el.rel = "stylesheet"
+          el.href = style
+          document.head.insertBefore(el, document.head.childNodes[document.head.childNodes.length - 1].nextSibling)
+        })
+      }
+
+      loadStyles([
+        'https://use.fontawesome.com/releases/v5.0.10/css/all.css',
+        'https://use.typekit.net/oqz0pmk.css'
+      ])
+
+    </script>
   </body>
 </html>

@@ -3,6 +3,7 @@
 .blog {
   max-width: calc(100% + var(--spacing));
   margin: 0px calc(var(--spacing) / 2 * -1);
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
 }

@@ -1,0 +1,80 @@
+@import  '../../../variables.css';
+
+.ecogrid {
+  background: #da4626;
+  color: white;
+  padding: calc(var(--spacing) * 2) 0px;
+}
+
+.ecogrid section {
+  max-width: 1000px;
+}
+
+.ecogrid .logo {
+  width: 200px;
+  margin: 0px auto var(--spacing);
+  display: block;
+}
+
+.ecogrid .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ecogrid .content h2 {
+  opacity: 0.8;
+}
+
+.ecogrid .content .preview {
+  position: relative;
+  max-width: 580px;
+  min-width: 300px;
+  margin: var(--spacing) auto;
+}
+
+.ecogrid .content .preview img {
+  box-shadow: var(--shadow);
+  border-radius: var(--spacing);
+}
+
+.ecogrid .content .preview button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
+  padding-left: 12px;
+  text-align: center;
+  background: #da4626;
+  color: white;
+  border: none;
+  appearence: none;
+  font-size: 1.2em;
+  border-radius: var(--spacing);
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.ecogrid .content .preview button:focus {
+  outline: none;
+}
+
+@media (min-width: 700px) {
+  .ecogrid .content {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .ecogrid .content .preview {
+    width: 45%;
+    margin: calc(var(--spacing) * 2);
+    margin-left: 0px;
+  }
+
+  .ecogrid .content h2 {
+    width: 55%;
+  }
+}

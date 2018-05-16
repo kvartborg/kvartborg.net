@@ -12,11 +12,6 @@ export default class Blog extends Component {
 
   componentDidMount () {
     this.fetchPosts()
-    window.addEventListener("resize", this.initColumn)
-  }
-
-  componentWillUnmount () {
-    window.removeEventListener("resize", this.initColumn)
   }
 
   async fetchPosts () {
@@ -26,32 +21,6 @@ export default class Blog extends Component {
     this.setState({
       posts: [...posts]
     }, this.initColumn)
-  }
-
-  initColumn () {
-    if (window.innerWidth < 700) {
-      return
-    }
-
-    const COL_COUNT = 2
-    const col_heights = []
-    const container = document.querySelector('.blog')
-
-    for (let i = 0; i <= COL_COUNT; i++) {
-      col_heights.push(0)
-    }
-
-    for (let i = 0; i < container.children.length; i++) {
-      const order = (i + 1) % COL_COUNT || COL_COUNT
-      if (container.children[i].style.height === "") {
-        container.children[i].style.height = container.children[i].offsetHeight + 'px'
-      }
-      container.children[i].style.order = order
-      col_heights[order] += parseFloat(container.children[i].style.height)
-    }
-
-    const highest = Math.max.apply(Math, col_heights)
-    container.style.height = highest+'px'
   }
 
   animate = id => {

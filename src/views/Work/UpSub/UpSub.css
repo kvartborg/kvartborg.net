@@ -1,0 +1,146 @@
+@import '../../../variables';
+
+.upsub {
+  --primary: #59CD90;
+  --primary-light: #7AD7A6;
+  --info: #559DF3;
+  --info-light: #77B1F5;
+  --danger: #EE6352;
+  --danger-light: #F18275;
+  --dark: #1C3144;
+  --dark-light: #495A69;
+  --dark-transparent: rgba(0, 0, 0, 0.3);
+  --grey: #DCE0D9;
+  --grey-light: #F2F2F2;
+  --grey-transparent: rgba(0, 0, 0, .026);
+  --white: white;
+  --white-light: #FFFEFD;
+}
+
+.upsub .logo {
+  min-width: 25px;
+  min-height: 25px;
+  display: inline-block;
+}
+
+.upsub .logo svg {
+  transform: rotate(45deg) translateY(-10px);
+  transform-origin: center;
+  vertical-align: middle;
+}
+
+.upsub .logo span {
+  margin: 0px calc(var(--spacing) / 2);
+  font-weight: 500;
+}
+
+.upsub .logo .primary { fill: var(--primary); }
+.upsub .logo .primary-light { fill: var(--primary-light); }
+.upsub .logo .info { fill: var(--info); }
+.upsub .logo .info-light { fill: var(--info-light); }
+.upsub .logo .danger { fill: var(--danger); }
+.upsub .logo .danger-light { fill: var(--danger-light); }
+.upsub .logo .dark { fill: var(--dark); }
+.upsub .logo .dark-light { fill: var(--dark-light); }
+.upsub .logo .grey { fill: var(--grey); }
+.upsub .logo .grey-light { fill: var(--grey-light); }
+.upsub .logo .white { fill: var(--white); }
+.upsub .logo .white-light { fill: var(--white-light); }
+
+.upsub .intro {
+  position: relative;
+  padding: var(--spacing) 0px;
+  min-height: 840px;
+  overflow: hidden;
+  border-bottom: solid 1px var(--grey-light);
+}
+
+.upsub .intro .planes {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  z-index: 0;
+}
+
+.upsub .intro .content {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: calc(var(--spacing) * 2) 0px;
+  z-index: 1;
+}
+
+.upsub .intro .content img {
+  width: 130px;
+  display: block;
+  margin: 0px auto;
+}
+
+.upsub .trail {
+  position: absolute;
+  display: inline-block;
+  height: 200vh;
+  width: 25px;
+  transform-origin: center center;
+}
+
+.upsub .trail .logo {
+  opacity: 0;
+}
+
+.upsub .trail.animation-1 .logo {
+  animation: fly 12s linear infinite;
+}
+
+.upsub .trail.animation-2 .logo {
+  animation: fly 12s linear infinite;
+  animation-delay: 6s;
+}
+
+.upsub .trail.animation-3 .logo {
+  animation: fly 20s linear infinite;
+}
+
+.upsub .trail.animation-4 .logo {
+  animation: fly 20s linear infinite;
+  animation-delay: 10s;
+}
+
+.upsub .trail .logo svg { transform: rotate(180deg); }
+
+@keyframes fly {
+  0% { transform: translateY(0);  }
+  1% { opacity: 0.06; }
+  99% { opacity: 0.06; }
+  100% { transform: translateY(200vh); }
+}
+
+.upsub .links {
+  list-style: none;
+  padding: 0px;
+}
+
+.upsub .links li {
+  font-size: 1.4em;
+  margin-top: calc(var(--spacing) / 4);
+}
+
+.upsub h1 {
+  margin-bottom: 0px;
+}
+
+.upsub h2.subject {
+  margin-top: calc(var(--spacing) / 4);
+}
+
+@media(min-width: 600px) {
+  .upsub .intro {
+    min-height: 640px !important;
+  }
+}

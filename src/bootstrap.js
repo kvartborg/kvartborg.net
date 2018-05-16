@@ -3,7 +3,7 @@ import { h, render } from 'preact'
 import Routes from './Routes'
 import './base.css'
 
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js')
       .catch(() => {})

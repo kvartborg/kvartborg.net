@@ -14,11 +14,12 @@ const outputProduction = {
 }
 
 module.exports = {
-  entry: [
-    path.resolve('./src/bootstrap.js'),
-    path.resolve('./src/service-worker.js'),
-    path.resolve('./src/shell.html')
-  ],
+  entry: {
+    main: path.resolve('./src/bootstrap.js'),
+    //vendor: ['preact', 'preact-router', 'preact-markdown', 'preact-async-route', 'highlight.js'],
+    sw: path.resolve('./src/service-worker.js'),
+    shell: path.resolve('./src/shell.html')
+  },
   output: process.argv.includes('-p') ? outputProduction : outputDev,
   target: 'web',
   mode: 'development',
@@ -43,7 +44,7 @@ module.exports = {
           'postcss-loader'
         ]
       }, {
-        test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+        test: /\.(jpe|jpg|png|woff|woff2|eot|ttf|svg|mp4)(\?.*$|$)/,
         loader: 'file-loader'
       }, {
         test: /\.(html)(\?.*$|$)/,

@@ -1,11 +1,13 @@
 import { Router } from 'preact-router'
 import AsyncRoute from 'preact-async-route'
-import Profile from 'views/Profile'
 import NotFound from 'views/NotFound'
 
 export default () => (
   <Router>
-    <Profile path='/' />
+    <AsyncRoute
+      path='/'
+      getComponent={() => import('views/Profile').then(module => module.default)}
+    />
     <AsyncRoute
       path='/blog'
       getComponent={() => import('views/Blog').then(module => module.default)}

@@ -1,0 +1,13 @@
+@import  '../../variables.css';
+
+.work {
+  /* margin-top: calc(var(--header-height) * -1); */
+  height: 400px;
+  line-height: 400px;
+  text-align: center;
+}
+
+header.work h1 {
+  display: inline;
+  margin: 0px;
+}

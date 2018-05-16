@@ -26,10 +26,10 @@ workbox.routing.registerRoute(
 )
 
 /**
- * Cache images
+ * Cache images and video
  */
 workbox.routing.registerRoute(
-  /\.(?:png|gif|jpg|jpeg|svg|ico)$/,
+  /\.(?:png|gif|jpg|jpeg|svg|ico|mp4)$/,
   workbox.strategies.cacheFirst({
     cacheName: 'static-cache',
     plugins: [
