@@ -2,8 +2,8 @@ import Layout from 'components/Layout'
 import Document from 'components/Document'
 import './Blog.css'
 
-export default ({ post }) => (
+export default ({ year, month, day, post }) => (
   <Layout>
-    <Document path={post} />
+    <Document path={`${year}-${month}-${day}-${post}`} />
   </Layout>
 )

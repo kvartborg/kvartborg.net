@@ -31,7 +31,8 @@ app.get('/blog/posts.json', (req, res) => {
       continue
     }
 
-    meta.url = post.replace('.md', '')
+    const [year, month, day, ...url] = post.replace('.md', '').split('-')
+    meta.url = `${year}/${month}/${day}/${url.join('-')}`
     result.push(meta)
   }
 
