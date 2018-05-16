@@ -29,8 +29,10 @@ export default () => (
         <div>
           <h1>EcoGrid 2.0</h1>
           <h2 class='subject'>
-            I was invovled in the EcoGrid 2.0 project when i worked at Uptime.
-            My primary task was to develop a progressive web application for the
+            One of the projects i was tasked with at Uptime was EcoGrid 2.0.
+            My team's primary task was to define the architecture of an interopability
+            layer between the system and the aggregators equipment.
+            After this process we develop a progressive web application for the
             households, to monitor and control their temperature flexibility.
           </h2>
         </div>

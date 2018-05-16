@@ -1,7 +1,6 @@
 @import  '../../../variables.css';
 
 .ecogrid {
-  /* background: #fafafa; */
   color: var(--dark);
   padding: calc(var(--spacing) * 4) 0px;
 }
@@ -26,15 +25,16 @@
 
 .ecogrid .content {
   display: flex;
-  align-items: flex-start;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .ecogrid .content .preview {
   position: relative;
   max-width: 580px;
   min-width: 300px;
-  margin: var(--spacing) auto calc(var(--spacing) * 2);
+  margin: 0px auto calc(var(--spacing) * 2);
+  margin-bottom: calc(var(--spacing) * 2);
 }
 
 .ecogrid .content .preview img {
@@ -80,7 +80,6 @@
 
   .ecogrid .content .preview {
     min-width: 40%;
-    margin: 0px;
     margin-right: calc(var(--spacing) * 2);
   }
 }
