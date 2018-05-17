@@ -6,7 +6,7 @@ import './Blog.css'
 
 export default class Blog extends Component {
   state = {
-    posts: [],
+    posts: JSON.parse(localStorage.getItem('posts')) || [],
     animate: null
   }
 
@@ -17,6 +17,7 @@ export default class Blog extends Component {
   async fetchPosts () {
     const res = await fetch('/blog/posts.json')
     const posts = await res.json()
+    localStorage.setItem('posts', JSON.stringify(posts))
 
     this.setState({
       posts: [...posts]
