@@ -27,7 +27,7 @@ export default class Hueify extends Component {
               <h2 class='subject'>
                 Take control of your Philips Hue lights from your Mac.
                 The application is built with Preact and Electron and therefore easily
-                hackable. Can be build for Windows as well, just havent had the time.
+                hackable. Can be built for Windows as well, just havent had the time.
                 Would love a PR if somebody wants to port it.
               </h2>
               <ul class='links'>
