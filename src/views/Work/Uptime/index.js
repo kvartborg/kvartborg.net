@@ -43,7 +43,7 @@ export default () => (
         At Uptime i were involved in a lot of different projects through the years.
         This includes webshops, progressive web applications based on React/Preact or Vue.js,
         and embedded development for the Rasperry pi. Here is a list of some of
-        the projects i worked on: Bridge Walking Lillebælt, Screenify, EcoGrid, Vision Field Care,
+        the projects i worked on: Bridge Walking Lillebælt, Screenify, EcoGrid, Vision Field Care, UpSub,
         internal Dashboard for monitoring and other internal stuff.
       </h2>
     </section>

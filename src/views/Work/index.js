@@ -6,7 +6,7 @@ import Uptime from './Uptime'
 import './Work.css'
 
 export default () => (
-  <Layout>
+  <Layout footer={true}>
     {/* <header class='work'>
       <h1>🚀 Work</h1>
     </header> */}

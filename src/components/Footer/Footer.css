@@ -1,0 +1,29 @@
+@import '../../variables.css';
+
+footer {
+  display: none;
+  margin-bottom: -85px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.2em;
+  border-top: solid 1px var(--grey);
+  margin-top: var(--spacing);
+}
+
+footer section {
+  max-width: 880px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer section .social a {
+  padding: 0px calc(var(--spacing) / 4);
+  font-size: 1.4em;
+  color: var(--dark);
+}
+
+@media(min-width: 1200px) {
+  footer {
+    display: block;
+  }
+}
