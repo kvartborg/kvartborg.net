@@ -25,7 +25,7 @@
   "dependencies": {
     "camelcase": "^5.0.0",
     "express": "^4.16.3",
-    "puppeteer": "^1.2.0"
+    "puppeteer": "^1.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",

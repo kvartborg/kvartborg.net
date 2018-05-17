@@ -1,0 +1,46 @@
+const fs = require('fs')
+const { resolve } = require('path')
+const puppeteer = require('puppeteer')
+const CACHE = resolve('./cache')
+const BASE_URL = process.env.NODE_ENV === 'production' ? 'https://kvartborg.net' : 'http://localhost:3000'
+
+if (!fs.existsSync(CACHE)) {
+  fs.mkdirSync(CACHE)
+}
+
+process.on('message', path => {
+  run(path)
+})
+
+const getFileName = path => {
+  const date = new Date()
+
+  return [
+    date.getFullYear(),
+    date.getMonth() + 1,
+    date.getDate(),
+    path.split('/').join('-')
+  ].join('_') + '.html'
+}
+
+const run = async path => {
+  if (path.includes('.')) {
+    return
+  }
+
+  if (fs.existsSync(resolve(CACHE, getFileName(path)))) {
+    return
+  }
+
+  const browser = await puppeteer.launch()
+  const page = await browser.newPage()
+  await page.goto(BASE_URL + path + '?robot=true', { waitUntil: 'networkidle0' })
+  const html = await page.content()
+
+  fs.writeFileSync(
+    resolve(CACHE, getFileName(path, html)),
+    html
+  )
+
+  await browser.close();
+}

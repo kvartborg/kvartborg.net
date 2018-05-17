@@ -16,4 +16,4 @@ const Main = () => (
   <Routes />
 )
 
-render(<Main />, document.getElementById('root'))
+render(<Main />, document.getElementById('root'), document.getElementById('root').lastChild)
