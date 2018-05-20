@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "rm -rf build && webpack -p",
+    "build": "rm -rf build && webpack -p && sed -i \"s/main.js/$(cd build && ls main.*.js)/g\" build/shell.html",
     "build:watch": "rm -rf build && webpack -w",
     "lint": "standard | snazzy",
     "lint:fix": "standard --fix | snazzy"
