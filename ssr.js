@@ -32,7 +32,10 @@ const run = async path => {
     return
   }
 
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({
+    args: ['--disable-dev-shm-usage', '--no-sandbox']
+  })
+  
   const page = await browser.newPage()
   await page.goto(BASE_URL + path + '?robot=true', { waitUntil: 'networkidle0' })
   const html = await page.content()
