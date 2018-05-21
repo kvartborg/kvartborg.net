@@ -18,6 +18,7 @@ RUN chmod +x /usr/local/bin/dumb-init
 WORKDIR /var/www/kvartborg.net
 COPY . /var/www/kvartborg.net
 RUN npm install
+ENV NODE_ENV production
 RUN npm run build
 
 RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \

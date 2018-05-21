@@ -10,13 +10,12 @@ const outputDev = {
 const outputProduction = {
   path: path.resolve('build'),
   publicPath: '/',
-  filename: '[name].[chunkhash].js'
+  filename: '[name].js'
 }
 
 module.exports = {
   entry: {
     main: path.resolve('./src/bootstrap.js'),
-    // vendor: ['preact', 'preact-router', 'preact-markdown', 'preact-async-route', 'highlight.js'],
     sw: path.resolve('./src/service-worker.js'),
     shell: path.resolve('./src/shell.html')
   },
