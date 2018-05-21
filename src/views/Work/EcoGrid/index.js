@@ -24,7 +24,7 @@ export default () => (
       <div class='content'>
         <div class='preview'>
           <img src={preview} />
-          <button><i class='fas fa-play' /></button>
+          <a href='https://player.vimeo.com/video/219810706' target='_blank' rel='noopener noreferrer'><button><i class='fas fa-play' /></button></a>
         </div>
         <div>
           <h1>EcoGrid 2.0</h1>
