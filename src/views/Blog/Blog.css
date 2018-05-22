@@ -67,7 +67,7 @@
 
 @media(min-width: 700px) {
   .blog {
-    flex-flow: column wrap;
+    flex-flow: nowrap;
   }
 
   .blog-section {
@@ -75,7 +75,6 @@
   }
 
   .blog .post {
-    flex: 1 0 auto;
     margin: 0px calc(var(--spacing) / 2) var(--spacing);
     width: calc(50% - (var(--spacing) / 2) * 2);
   }

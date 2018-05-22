@@ -76,7 +76,12 @@ img {
   max-width: 100%;
 }
 
-blockquote {}
+blockquote {
+  border-left: 4px solid var(--grey);
+  color: var(--dark-light);
+  margin-left: 0px;
+  padding-left: var(--spacing);
+}
 
 @media(min-width: 1200px) {
   .wrapper {

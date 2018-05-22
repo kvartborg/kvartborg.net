@@ -48,7 +48,7 @@ app.get('/blog/posts.json', (req, res) => {
     result.push(meta)
   }
 
-  res.send(result)
+  res.send(result.reverse())
 })
 
 const getFileName = p => {
