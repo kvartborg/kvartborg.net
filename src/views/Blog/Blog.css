@@ -66,8 +66,8 @@
 
 
 @media(min-width: 700px) {
-  .blog {
-    flex-flow: nowrap;
+  .blog .post {
+    width: 50%;
   }
 
   .blog-section {
