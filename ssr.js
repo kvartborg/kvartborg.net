@@ -33,9 +33,10 @@ const run = async path => {
   }
 
   const browser = await puppeteer.launch({
+    executablePath: '/usr/bin/chromium-browser',
     args: ['--disable-dev-shm-usage', '--no-sandbox']
   })
-  
+
   const page = await browser.newPage()
   await page.goto(BASE_URL + path + '?robot=true', { waitUntil: 'networkidle0' })
   const html = await page.content()

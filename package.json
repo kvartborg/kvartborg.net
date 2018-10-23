@@ -5,10 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "rm -rf build && webpack -p",
-    "build:watch": "rm -rf build && webpack -w",
+    "build": "rm -rf build && rm -rf cache && webpack -p",
+    "build:watch": "rm -rf build && rm -rf cache && webpack -w",
     "lint": "standard | snazzy",
-    "lint:fix": "standard --fix | snazzy"
+    "lint:fix": "standard --fix | snazzy",
+    "clean": "rm -rf build && rm -rf cache && rm -rf node_modules"
   },
   "keywords": [],
   "author": "Frederik Kvartborg Albertsen",
