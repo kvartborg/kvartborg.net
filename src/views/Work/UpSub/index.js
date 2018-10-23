@@ -44,7 +44,7 @@ export default class UpSub extends Component {
                   </a>
                 </li>
                 <li>
-                  <a href='https://upsub.kvartborg.net' target='_blank' rel='noopener noreferrer'>
+                  <a href='https://upsub.io' target='_blank' rel='noopener noreferrer'>
                     <i class='fas fa-book' /> Documentation
                   </a>
                 </li>
