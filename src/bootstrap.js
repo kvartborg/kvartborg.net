@@ -1,4 +1,4 @@
-import 'babel-polyfill'
+import '@babel/polyfill'
 import { h, render } from 'preact'
 import Routes from './Routes'
 import './base.css'
