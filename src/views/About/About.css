@@ -1,0 +1,77 @@
+@import '@quartercastle/style/base';
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding-bottom: calc(var(--spacing) * 2.4);
+}
+
+.about h1 {
+  margin: 0px;
+  margin-bottom: .2em;
+  padding: 0px;
+}
+
+.about p {
+  max-width: 500px;
+  margin: 0px;
+}
+
+.about p a {
+  color: inherit;
+}
+
+.about img {
+  max-width: 300px;
+  max-height: 300px;
+  margin: calc(var(--spacing)*1.4) calc(var(--spacing) / 2);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+
+.about .social {
+  margin-top: 1.2em;
+  max-width: 260px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.about .social a {
+  display: block;
+  color: var(--black);
+  font-size: 1.8em;
+  margin: 0px;
+  padding: 0px;
+  margin-right: calc(var(--spacing)/4);
+}
+
+.about .social a:focus {
+  box-shadow: none;
+  padding: 0px;
+  color: var(--blue) !important;
+}
+
+body.dark .about .social a {
+  color: var(--darker-white);
+}
+
+@media (max-width: 340px) {
+  .about img {
+    display: none;
+  }
+
+  .about {
+    padding-bottom: var(--spacing);
+  }
+}
+
+@media (min-width: 500px) {
+  .about {
+    padding-bottom: var(--spacing);
+  }
+}

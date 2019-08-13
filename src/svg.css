@@ -1,0 +1,52 @@
+@import '@quartercastle/style/base.css';
+
+svg g[id^='figure'] g[id^='text'] {
+  fill: var(--dark) !important;
+}
+
+.dark svg g[id^='figure'] g[id^='text'] {
+  fill: var(--darker-white) !important;
+}
+
+svg g[id^='figure'] g[id^='axes'] g[id^='patch'] path {
+  stroke: var(--dark) !important;
+}
+
+.dark svg g[id^='figure'] g[id^='axes'] g[id^='patch'] path {
+  stroke: var(--darker-white) !important;
+}
+
+svg g[id^='figure'] g[id^='axes'] g[id^='plot_1'] path {
+  stroke: var(--green) !important;
+}
+
+svg g[id^='figure'] g[id^='axes'] g[id^='plot_2'] path {
+  stroke: var(--blue) !important;
+}
+
+svg g[id^='figure'] g[id^='axes'] g[id^='plot_3'] path {
+  stroke: var(--red) !important;
+}
+
+svg g[id^='figure'] g[id^='axes'] g[id^='plot_4'] path {
+  stroke: var(--purple) !important;
+}
+
+svg g[id^='figure'] g[id^='axes'] g[id^='plot_5'] path {
+  stroke: var(--orange) !important;
+}
+
+svg g[id^='figure'] g[id^='axes'] g[id^='xtick'] path,
+svg g[id^='figure'] g[id^='axes'] g[id^='ytick'] path {
+  stroke: var(--dark) !important;
+}
+
+.dark svg g[id^='figure'] g[id^='axes'] g[id^='xtick'] path,
+.dark svg g[id^='figure'] g[id^='axes'] g[id^='ytick'] path {
+  stroke: var(--darker-white) !important;
+}
+
+svg g[id^='figure'] g[id^='legend'] g:first-child path {
+  fill: transparent !important;
+  stroke-width: 0;
+}

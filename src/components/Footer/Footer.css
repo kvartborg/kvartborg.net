@@ -1,29 +1,46 @@
-@import '../../variables.css';
+@import '@quartercastle/style/base.css';
 
-footer {
+footer.footer {
   display: none;
   margin-bottom: -85px;
-  height: 60px;
-  line-height: 60px;
+  height: 80px;
+  line-height: 80px;
   font-size: 1.2em;
-  border-top: solid 1px var(--grey);
+  color: var(--lighter-dark);
   margin-top: var(--spacing);
 }
 
-footer section {
-  max-width: 880px;
-  display: flex;
-  justify-content: space-between;
+body.dark footer.footer {
+  color: var(--darker-grey);
 }
 
-footer section .social a {
+footer.footer section {
+  max-width: 860px;
+  margin: 0px auto;
+  display: flex;
+  flex: wrap;
+  justify-content: center;
+}
+
+footer.footer section .social a {
   padding: 0px calc(var(--spacing) / 4);
   font-size: 1.4em;
-  color: var(--dark);
+  color: var(--lighter-dark);
 }
 
-@media(min-width: 1200px) {
-  footer {
+footer.footer section .social a:focus {
+  padding: 0px calc(var(--spacing) / 4);
+  margin: 0px;
+  color: var(--blue) !important;
+  box-shadow: none;
+}
+
+body.dark footer.footer section .social a {
+  color: var(--darker-grey);
+}
+
+@media(min-width: 1080px) {
+  footer.footer {
     display: block;
   }
 }

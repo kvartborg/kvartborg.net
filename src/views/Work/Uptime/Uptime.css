@@ -1,9 +1,0 @@
-@import '../../../variables.css';
-
-.uptime {
-  padding: calc(var(--spacing) * 4) 0px;
-}
-
-.uptime svg {
-  display: block;
-}

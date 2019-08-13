@@ -19,7 +19,15 @@ app.use((req, res, next) => {
   next()
 })
 
-app.get('/blog/posts.json', (req, res) => {
+app.get('/robots.txt', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'static/robots.txt'))
+})
+
+app.get('/manifest.json', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'static/manifest.json'))
+})
+
+app.get('/api/docs.json', (req, res) => {
   const POST_PATH = path.resolve(__dirname, 'static/docs')
   const posts = fs.readdirSync(POST_PATH)
   const result = []
@@ -64,7 +72,7 @@ const getFileName = p => {
 
 app.get('*', (req, res) => {
   res.set('Content-Type', 'text/html')
-
+  
   if (fs.existsSync(path.resolve(CACHE, getFileName(req.path)))) {
     res.send(
       fs.readFileSync(

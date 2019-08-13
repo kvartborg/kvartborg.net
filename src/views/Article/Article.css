@@ -1,0 +1,85 @@
+@import '@quartercastle/style/base.css';
+
+.article code {
+  line-height: 1.9em;
+}
+
+.article .loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article .loading i {
+  display: block;
+  animation-name: spin;
+  animation-duration: 2s;
+  color: var(--grey);
+  font-size: 3em;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+body.dark .article .loading i {
+  color: var(--darker-grey);
+  opacity: .4;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.article .cover {
+  background: transparent;
+  margin-bottom: var(--spacing);
+  padding-bottom: calc(var(--spacing) + 0px);
+}
+
+.article {
+  padding-bottom: calc(var(--spacing) * 2);
+}
+
+.article h3 {
+  margin-bottom: 0;
+  font-size: 1.4em !important;
+  margin-bottom: calc((var(--spacing) / 6) * -1);
+}
+
+.article header {
+  padding-top: calc(var(--spacing) * 3);
+}
+
+.article header h1 {
+  font-size: 2em;
+}
+
+.article svg {
+  width: calc(100% + (var(--spacing)*2));
+  margin: 0px calc(var(--spacing) * -1);
+}
+
+@media (min-width: 1080px) {
+  .article header {
+    padding-top: calc(var(--spacing));
+  }
+
+  .article {
+    min-height: calc(100vh - 130px);
+  }
+}
+
+@media (max-width: 700px) {
+  .article pre code {
+    border-radius: 0px;
+    margin-left: calc((var(--spacing) * -1) - 10px);
+    margin-right: calc((var(--spacing) * -1) - 10px);
+    padding: calc(var(--spacing) / 1.4) calc(var(--spacing) + 10px);
+    font-size: .7em;
+  }
+}
+
+@media (min-width: 1080px) {
+  .article {
+    padding-bottom: 0px;
+  }
+}

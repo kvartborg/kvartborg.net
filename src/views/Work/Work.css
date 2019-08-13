@@ -1,14 +1,61 @@
-@import  '../../variables.css';
+@import '@quartercastle/style/base.css';
 
 .work {
-  /* margin-top: calc(var(--header-height) * -1); */
-  height: 400px;
-  line-height: 400px;
-  text-align: center;
-
 }
 
-header.work h1 {
-  display: inline;
-  margin: 0px;
+.work .projects {
+  border-left: solid 3px var(--darker-white);
+  margin-left: calc(var(--spacing) + 14px);
+}
+
+.work .projects header {
+  position: relative;
+}
+
+.work .projects header small {
+  color: var(--darker-grey);
+}
+
+.work .projects header h3 {
+  font-size: 1.6em;
+}
+
+.work .projects header h3 i {
+  font-weight: 300;
+  color: var(--darker-white);
+}
+
+.work .projects header h3:before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: .2em;
+  left: calc((var(--spacing)*-1) + 1.456em);
+  background: var(--lighter-white);
+  border: solid 3px var(--darker-white);
+  border-radius: 100%;
+}
+
+.work .projects header p {
+  font-size: 1.2em;
+}
+
+.dark .work .projects header small {
+  color: var(--darker-grey);
+  opacity: .6;
+}
+
+.dark .work .projects {
+  border-left: solid 4px var(--lighter-dark);
+}
+
+.work .projects header h3 i {
+  color: var(--lighter-dark);
+}
+
+.dark .work .projects header h3:before {
+  background: var(--dark);
+  border: solid 4px var(--lighter-dark);
 }

@@ -6,15 +6,15 @@ export default () => (
   <Router>
     <AsyncRoute
       path='/'
-      getComponent={() => import('views/Profile').then(module => module.default)}
+      getComponent={() => import('views/About').then(module => module.default)}
     />
     <AsyncRoute
-      path='/blog'
-      getComponent={() => import('views/Blog').then(module => module.default)}
+      path='/articles'
+      getComponent={() => import('views/Articles').then(module => module.default)}
     />
     <AsyncRoute
-      path='/blog/:year/:month/:day/:post'
-      getComponent={() => import('views/Blog/Post').then(module => module.default)}
+      path='/article/:year/:month/:day/:title'
+      getComponent={() => import('views/Article').then(module => module.default)}
     />
     <AsyncRoute
       path='/work'

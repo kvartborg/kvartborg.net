@@ -1,90 +1,113 @@
-@import '../../variables.css';
+@import '@quartercastle/style/base.css';
+
+:root {
+  --height: 60px;
+}
 
 menu {
-  --height: 50px;
-  color: var(--dark);
+  display: block;
   position: fixed;
-  height: var(--height);
-  line-height: var(--height);
-  width: 100%;
-  left: 0px;
-  bottom: 0px;
-  box-shadow: 0px -1px 0px var(--grey);
   margin: 0px;
   padding: 0px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-  font-size: 1.4em;
-  z-index: 2;
-  transition: color .3s;
+  width: 100%;
+  height: var(--height);
+  background: rgba(255, 255, 255, .8);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+  backdrop-filter: saturate(180%) blur(20px);
+  font-size: 1.2em;
+  bottom: 0px;
+  z-index: 99;
 }
 
 menu ul {
-  padding: 0px var(--spacing);
-  margin: 0px;
+  max-width: 860px;
+  margin: 0px auto;
+  padding: 0px;
+  line-height: var(--height);
   display: flex;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
 menu ul li {
-  width: 20%;
-  text-align: center;
+  width: 200px;
   display: inline-block;
+  opacity: .6;
+  text-align: center;
 }
 
 menu ul li a {
-  color: inherit;
-  opacity: .5;
-  font-weight: 400;
+  color: var(--black);
 }
 
-menu ul li a .title {
-  display: none;
-  padding-left: calc(var(--spacing) / 4);
-  font-size: 0.8em;
-  transform: translateY(-2px);
+menu ul li a:focus {
+  padding: 4px 4px;
 }
 
-menu ul li a.active {
+menu ul li a:hover {
+  color: var(--black);
+}
+
+
+menu ul li:before { content: ''; }
+
+menu ul li.active {
   opacity: 1;
 }
 
-@supports not (backdrop-filter: blur(8px)) {
-  menu {
-    background: white;
+menu ul li i {
+  vertical-align: middle;
+}
+
+menu ul li span {
+  display: none;
+  vertical-align: middle;
+}
+
+body.dark menu {
+  background: rgba(34, 37, 42, .6);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.05);
+}
+
+body.dark menu ul li a {
+  color: var(--darker-white);
+}
+
+body.dark menu ul li a:hover {
+  color: var(--darker-white);
+}
+
+@supports not (backdrop-filter: saturate(180%) blur(20px)) {
+  menu { background: var(--lighter-white); }
+  body.dark menu {
+    background: var(--black);
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.05);
   }
 }
 
-@media(max-width: 1200px) {
-  menu {
-    color: var(--dark) !important;
-  }
-}
-
-@media(min-width: 500px) {
-  menu ul li a .title {
+@media(min-width: 580px) {
+  menu ul li span {
+    padding-left: calc(var(--spacing) / 8);
     display: inline-block;
   }
 }
 
-@media(min-width: 1200px) {
+@media(min-width: 1080px) {
   menu {
-    --height: 70px;
-    height: var(--height);
-    line-height: var(--height);
-    position: absolute;
-    top: 0px;
-    font-size: 1.6em;
+    --height: 80px;
     background: transparent;
     backdrop-filter: none;
+    box-shadow: none;
+    position: absolute;
+    top: 0px;
   }
 
   menu ul {
-    max-width: 880px;
-    margin: 0px auto;
+    justify-content: space-between;
   }
 
-  menu ul li {
-    width: auto;
+  body.dark menu {
+    box-shadow: none;
+    background: transparent;
   }
 }

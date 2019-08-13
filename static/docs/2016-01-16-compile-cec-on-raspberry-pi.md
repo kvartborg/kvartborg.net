@@ -3,9 +3,8 @@ title: Compile CEC for the Raspberry Pi
 published: true
 description: Control a monitor with CEC on the Raspberry pi, both compilation and basic usage of the libcec library is described in this post.
 tags: RPI, Raspberry pi, CEC, Compile, IoT, Install
-cover_image:
-cover_color: url('/static/imgs/raspberries.jpg') 100% / cover
-cover_text_color: white
+cover: url('/static/imgs/raspberries.jpg') 100% / cover
+menu-color: white
 ---
 
 > The steps described in this post was tested and used on a Raspberry pi 3 running a debain wheezy distribution.

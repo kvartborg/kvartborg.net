@@ -1,0 +1,92 @@
+@import '@quartercastle/style/base.css';
+
+.articles article header {
+  padding-bottom: calc(var(--spacing) * 1.2);
+}
+
+.articles article header h2 {
+  font-size: 1.8em;
+}
+
+.articles section article header p {
+  margin: 0px;
+  font-size: 1.2em;
+}
+
+.articles section {
+  padding: 0px;
+  padding-bottom: calc(var(--spacing) * 4);
+  max-width: 1100px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.articles section a {
+  display: block;
+  min-width: 240px;
+  width: 100%;
+  border-radius: var(--spacing);
+  margin: calc(var(--spacing)/1.6) calc(var(--spacing)/2);
+  padding: 4px;
+}
+
+.articles section a:focus {
+  padding: 4px;
+  margin: calc(var(--spacing)/1.6) calc(var(--spacing)/2);
+}
+
+.articles section a article {
+  border-radius: var(--spacing);
+  box-shadow: var(--shadow);
+  color: var(--dark);
+  display: flex;
+  align-items:flex-end;
+}
+
+.articles section a article header {
+  padding: var(--spacing);
+}
+
+.articles section a article header small {
+  font-size: .8em;
+}
+
+.articles section a article header small time {
+  color: rgba(0, 0, 0, 0.4);
+  color: var(--yellow);
+  vertical-align: middle;
+}
+
+.articles section a article header small code {
+  padding: 2px 8px;
+  color: var(--yellow);
+  background: rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+}
+
+@media(min-width:950px) {
+  .articles section a {
+    width: 46.2%;
+  }
+
+  .articles section article {
+    height: 440px;
+  }
+
+  .articles article header p {
+    margin: 0px;
+    font-size: 1.4em;
+  }
+}
+
+@media(min-width: 1080px) {
+  .articles section {
+    padding-bottom: calc(var(--spacing));
+  }
+
+  .articles article header {
+    padding-bottom: calc(var(--spacing) * 3.6);
+  }
+}

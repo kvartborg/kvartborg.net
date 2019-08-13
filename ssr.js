@@ -32,19 +32,24 @@ const run = async path => {
     return
   }
 
-  const browser = await puppeteer.launch({
-    executablePath: '/usr/bin/chromium-browser',
-    args: ['--disable-dev-shm-usage', '--no-sandbox']
-  })
+  try {
+    const browser = await puppeteer.launch({
+      // executablePath: '/usr/bin/chromium-browser',
+      args: ['--disable-dev-shm-usage', '--no-sandbox']
+    })
 
-  const page = await browser.newPage()
-  await page.goto(BASE_URL + path + '?robot=true', { waitUntil: 'networkidle0' })
-  const html = await page.content()
+    const page = await browser.newPage()
+    await page.goto(BASE_URL + path + '?robot=true', { waitUntil: 'networkidle0' })
+    await page.waitFor(4000)
+    const html = await page.content()
 
-  fs.writeFileSync(
-    resolve(CACHE, getFileName(path, html)),
-    html
-  )
+    fs.writeFileSync(
+      resolve(CACHE, getFileName(path, html)),
+      html
+    )
 
-  await browser.close();
+    await browser.close();
+  } catch (err) {
+    console.log(err.message)
+  }
 }

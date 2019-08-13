@@ -1,90 +1,31 @@
-@import './variables';
-
-*,*:before,*:after {
-  box-sizing: border-box;
-}
+@import '@quartercastle/style/base.css';
 
 body {
-  font-family: gesta, sans-serif;
-  font-size: 16px;
-  line-height: 1.8em;
-  color: var(--dark);
-  background: var(--bg);
-  margin: 0px;
-  padding: 0px;
-  user-select: none;
-  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
-  overflow-x: hidden;
+  font-display: auto;
 }
 
-.wrapper {
-  padding-bottom: calc(50px + var(--spacing));
-}
-
-section {
+.wrap {
+  max-width: 760px;
   margin: 0px auto;
-  max-width: var(--max-content-width);
-  padding: 0px var(--spacing);
 }
 
-h1, h2, h3, h4, h5, h6 {
-
+h1:first-child {
+  margin-top: 0px;
+  padding-top: calc(var(--spacing) / 2);
 }
 
-h1 {
-  line-height: 1.4em;
-  font-size: 2.4em;
+article header p {
+  margin-top: calc(var(--spacing)/10);
+  opacity: .6;
 }
 
-h2 {
-  font-size: 2em;
-  line-height: 1.4em;
+.katex-display {
+  display: inline-block !important;
+  margin: 0px !important;
 }
 
-h2.subject {
-  font-size: 1.4em;
-  line-height: 1.6em;
-  opacity: .7;
-  font-weight: 400;
-}
-
-h2.subject a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-a {
-  color: var(--primary);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-code {
-  font: menlo, monospace;
-  padding: 4px 6px;
-  border-radius: 4px;
-  background: var(--grey);
-}
-
-p {
-
-}
-
-img {
-  display: inline-block;
-  margin: 0px auto;
-  max-width: 100%;
-}
-
-blockquote {
-  border-left: 4px solid var(--grey);
-  color: var(--dark-light);
-  margin-left: 0px;
-  padding-left: var(--spacing);
-}
-
-@media(min-width: 1200px) {
-  .wrapper {
-    margin-top: calc(var(--header-height) + var(--spacing));
+@media(min-width: 1080px) {
+  h1:first-child {
+    padding-top: calc(var(--spacing)*2);
   }
 }
