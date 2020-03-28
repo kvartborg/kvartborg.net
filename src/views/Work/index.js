@@ -69,7 +69,7 @@ export default () => (
 
     <article class="work wrap">
       <header>
-        <h1>Work Experience</h1>
+        <h1>Work Experience 💼</h1>
         <p>
         </p>
       </header>

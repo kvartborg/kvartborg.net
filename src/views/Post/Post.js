@@ -1,6 +1,7 @@
 import { Component } from 'preact'
 import Markdown from 'preact-markdown'
 import Layout from 'components/Layout'
+import NotFound from 'views/NotFound'
 import camelcase from 'camelcase'
 import renderMathInElement from 'katex/dist/contrib/auto-render.js'
 import '@iconfu/svg-inject'
@@ -9,6 +10,7 @@ import './Post.css'
 
 export default class extends Component {
   state = {
+    notFound: false,
     article: null
   }
 
@@ -62,12 +64,15 @@ export default class extends Component {
     }
   }
 
-
-
-
   async fetchDocument () {
     const [_, __, year, month, day, title] = window.location.pathname.split('/')
     const res = await fetch(`/static/docs/${year}-${month}-${day}-${title}.md`)
+
+    if (res.headers.get("Content-Type").includes("text/html")) {
+      this.setState({ notFound: true })
+      return
+    }
+
     this.parseDoc(await res.text())
   }
 
@@ -96,7 +101,11 @@ export default class extends Component {
     )
   }
 
-  render (_, { article }) {
+  render (_, { article, notFound }) {
+    if (notFound) {
+      return <NotFound />
+    }
+
     return (
       <Layout
         title={article ? article.header.title : undefined}

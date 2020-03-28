@@ -40,6 +40,10 @@ menu ul li a {
   color: var(--black);
 }
 
+menu ul li a:hover {
+  color: var(--black);
+}
+
 menu ul li a span {
   vertical-align: top;
 }

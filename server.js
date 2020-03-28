@@ -10,6 +10,7 @@ const prerenderer = fork(path.resolve(__dirname, 'ssr.js'))
 
 app.use(express.static('build'))
 app.use('/static', express.static('static'))
+
 app.use((req, res, next) => {
   if (req.query.robot) {
     return next()
@@ -72,7 +73,7 @@ const getFileName = p => {
 
 app.get('*', (req, res) => {
   res.set('Content-Type', 'text/html')
-  
+
   if (fs.existsSync(path.resolve(CACHE, getFileName(req.path)))) {
     res.send(
       fs.readFileSync(
@@ -81,7 +82,6 @@ app.get('*', (req, res) => {
     )
     return
   }
-
 
   res.send(
     fs.readFileSync(path.resolve(__dirname, 'build', 'shell.html'))
