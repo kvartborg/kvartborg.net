@@ -16,7 +16,7 @@ h1:first-child {
 
 article header p {
   margin-top: calc(var(--spacing)/10);
-  opacity: .6;
+  opacity: .8;
 }
 
 .katex-display {
