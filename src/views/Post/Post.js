@@ -3,9 +3,9 @@ import Markdown from 'preact-markdown'
 import Layout from 'components/Layout'
 import NotFound from 'views/NotFound'
 import camelcase from 'camelcase'
+import 'katex/dist/katex.css'
 import renderMathInElement from 'katex/dist/contrib/auto-render.js'
 import '@iconfu/svg-inject'
-import 'katex/dist/katex.css'
 import './Post.css'
 
 export default class extends Component {
@@ -22,11 +22,7 @@ export default class extends Component {
   componentDidUpdate () {
     Prism.highlightAll()
 
-    renderMathInElement(document.body, [
-      {left: "$$", right: "$$", display: true},
-      {left: "\\(", right: "\\)", display: false},
-      {left: "\\[", right: "\\]", display: true}
-    ])
+    renderMathInElement(document.body)
 
     const imgs = document.querySelectorAll("img")
 
