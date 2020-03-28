@@ -19,18 +19,50 @@ export default class extends Component {
 
   componentDidUpdate () {
     Prism.highlightAll()
+
     renderMathInElement(document.body, [
       {left: "$$", right: "$$", display: true},
       {left: "\\(", right: "\\)", display: false},
       {left: "\\[", right: "\\]", display: true}
     ])
+
     const imgs = document.querySelectorAll("img")
 
     for (const img of imgs) {
       if (img.src.substr(img.src.length-4) !== ".svg") continue
       SVGInject(img, {makeIdsUnique: false});
     }
+
+    const headings = document.querySelectorAll("h1, h2, h3")
+
+    for (const heading of headings) {
+      const id = heading.getAttribute('id')
+
+      if (!id) {
+        continue
+      }
+
+      heading.classList.remove('linked')
+      heading.addEventListener("click", () => (
+        window.location.hash = id
+      ))
+    }
+
+    if (window.location.hash !== "") {
+      const el = document.querySelector(window.location.hash)
+
+      if (!el) {
+        return
+      }
+
+      setTimeout(() => {
+        el.classList.add("linked")
+        window.scrollTo(0, el.offsetTop-40)
+      }, 0)
+    }
   }
+
+
 
 
   async fetchDocument () {

@@ -6,6 +6,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+}
+
+article.post section h1,
+article.post section h2,
+article.post section h3 {
+  cursor: pointer;
+}
+
+article.post section h1:before,
+article.post section h2:before,
+article.post section h3:before {
+  content:'#';
+  position: absolute;
+  margin-left: calc((var(--spacing)/2)*-1);
+  color: var(--darker-grey);
+}
+
+.dark article.post section h1:before,
+.dark article.post section h2:before,
+.dark article.post section h3:before {
+  color: var(--lighter-dark);
+}
+
+article.post section h1.linked:before,
+article.post section h2.linked:before,
+article.post section h3.linked:before {
+  color: var(--darker-blue);
+}
+
+article.post section h1:hover:before,
+article.post section h2:hover:before,
+article.post section h3:hover:before {
+  color: var(--darker-blue);
 }
 
 .post .loading i {
