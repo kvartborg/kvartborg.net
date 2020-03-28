@@ -73,10 +73,8 @@ export default class extends Component {
         return
       }
 
-      setTimeout(() => {
-        el.classList.add("linked")
-        window.scrollTo(0, el.offsetTop-40)
-      }, 0)
+      el.classList.add("linked")
+      window.scrollTo(0, el.offsetTop-40)
     }
   }
 
