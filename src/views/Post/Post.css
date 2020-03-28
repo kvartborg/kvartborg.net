@@ -1,5 +1,10 @@
 @import '@quartercastle/style/base.css';
 
+.post .katex-display {
+  display: inline-block;
+  margin: 0px;
+}
+
 .post .loading {
   width: 100vw;
   height: 100vh;

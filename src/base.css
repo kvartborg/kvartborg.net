@@ -38,11 +38,6 @@ article header p {
   color: var(--darker-grey);
 }
 
-.katex-display {
-  display: inline-block !important;
-  margin: 0px !important;
-}
-
 @media(min-width: 1080px) {
   h1:first-child {
     padding-top: calc(var(--spacing)*2);

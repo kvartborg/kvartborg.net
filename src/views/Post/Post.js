@@ -24,6 +24,26 @@ export default class extends Component {
 
     renderMathInElement(document.body)
 
+    const eqs = document.querySelectorAll('.katex-display')
+
+    for (const eq of eqs) {
+      const children = eq.parentNode.parentNode.childNodes
+
+      let noText = true
+
+      for (const child of children) {
+        if (child.nodeType !== Node.TEXT_NODE) {
+          continue
+        }
+
+        if (child.length > 0) noText = false
+      }
+
+      if (noText) {
+        eq.style.display = 'block'
+      }
+    }
+
     const imgs = document.querySelectorAll("img")
 
     for (const img of imgs) {
