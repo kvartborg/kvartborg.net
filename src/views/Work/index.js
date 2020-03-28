@@ -18,7 +18,7 @@ export default () => (
         <article>
           <header>
             <h3>vector <a href="https://github.com/kvartborg/vector" rel="vector repository" target="_blank"><i class="fab fa-github" /></a></h3>
-            <p>Is an experiment about finding a better way to write vector math in Go, there has to be a more expressive way without it getting to verbose, <Link href="/article/2020/02/02/vector" rel="See article">See article</Link>.</p>
+            <p>Is an experiment about finding a better way to write vector math in Go, there has to be a more expressive way without it getting to verbose, <Link href="/post/2020/02/02/vector" rel="See post">See post</Link>.</p>
           </header>
         </article>
         <article>

@@ -9,12 +9,12 @@ export default () => (
       getComponent={() => import('views/About').then(module => module.default)}
     />
     <AsyncRoute
-      path='/articles'
-      getComponent={() => import('views/Articles').then(module => module.default)}
+      path='posts'
+      getComponent={() => import('views/Posts').then(module => module.default)}
     />
     <AsyncRoute
-      path='/article/:year/:month/:day/:title'
-      getComponent={() => import('views/Article').then(module => module.default)}
+      path='post/:year/:month/:day/:title'
+      getComponent={() => import('views/Post').then(module => module.default)}
     />
     <AsyncRoute
       path='/work'

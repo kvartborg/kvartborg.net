@@ -5,7 +5,7 @@ import camelcase from 'camelcase'
 import renderMathInElement from 'katex/dist/contrib/auto-render.js'
 import '@iconfu/svg-inject'
 import 'katex/dist/katex.css'
-import './Article.css'
+import './Post.css'
 
 export default class extends Component {
   state = {
@@ -71,7 +71,7 @@ export default class extends Component {
         description={article ? article.header.description : undefined}
         menuColor={article && article.header.menuColor}
       >
-        <article class='article'>
+        <article class='post'>
           {!article && this.loading()}
           {article && article.header.cover && (
             <div class='cover' style={{color: article.header.menuColor, background: article.header.cover}}>

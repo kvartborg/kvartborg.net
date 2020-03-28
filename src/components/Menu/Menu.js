@@ -15,17 +15,17 @@ export default class extends Component {
       <menu>
         <ul>
           <li class={isActive('/')}>
-            <a href='/' style={{color}} aria-label='kvartborg' alt='quartercastle'>
+            <a href='/' style={{color}} aria-label='kvartborg' alt='quartercastle' tabindex="1">
               <i class="fas fa-at" /> <span>quartercastle</span>
             </a>
           </li>
-          <li class={isActive('/articles') || window.location.pathname.includes('/article/') ? 'active' : ''}>
-            <a href='/articles' aria-label='article' alt='article' style={{color}}>
-              <i class="far fa-newspaper" /> <span>articles</span>
+          <li class={isActive('/posts') || window.location.pathname.includes('post/') ? 'active' : ''}>
+            <a href='/posts' aria-label='posts' alt='posts' style={{color}} tabindex="2">
+              <i class="far fa-newspaper" /> <span>posts</span>
             </a>
           </li>
           <li class={isActive('/work')}>
-            <a href='/work' style={{color}}>
+            <a href='/work' style={{color}} tabindex="3">
               <i class="fas fa-code-branch" aria-label='work' alt='work' /> <span>work</span>
             </a>
           </li>

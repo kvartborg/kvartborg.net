@@ -16,7 +16,11 @@ h1:first-child {
 
 article header p {
   margin-top: calc(var(--spacing)/10);
-  opacity: .8;
+  color: var(--lighter-dark);
+}
+
+.dark article header p {
+  color: var(--darker-grey);
 }
 
 .katex-display {

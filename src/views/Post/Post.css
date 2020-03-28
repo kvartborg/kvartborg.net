@@ -1,10 +1,6 @@
 @import '@quartercastle/style/base.css';
 
-.article code {
-  line-height: 1.9em;
-}
-
-.article .loading {
+.post .loading {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -12,7 +8,7 @@
   align-items: center;
 }
 
-.article .loading i {
+.post .loading i {
   display: block;
   animation-name: spin;
   animation-duration: 2s;
@@ -22,54 +18,60 @@
   animation-timing-function: linear;
 }
 
-body.dark .article .loading i {
+body.dark .post .loading i {
   color: var(--darker-grey);
   opacity: .4;
 }
 
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-.article .cover {
+.post .cover {
   background: transparent;
   margin-bottom: var(--spacing);
   padding-bottom: calc(var(--spacing) + 0px);
 }
 
-.article {
+.post .cover header p {
+  opacity: .8;
+  color: inherit !important;
+}
+
+
+.post {
   padding-bottom: calc(var(--spacing) * 2);
 }
 
-.article h3 {
+.post h3 {
   margin-bottom: 0;
   font-size: 1.4em !important;
   margin-bottom: calc((var(--spacing) / 6) * -1);
 }
 
-.article header {
+.post header {
   padding-top: calc(var(--spacing) * 3);
 }
 
-.article header h1 {
+.post header h1 {
   font-size: 2em;
 }
 
-.article svg {
+.post svg {
   width: calc(100% + (var(--spacing)*2));
   margin: 0px calc(var(--spacing) * -1);
 }
 
 @media (min-width: 1080px) {
-  .article header {
+  .post header {
     padding-top: calc(var(--spacing));
   }
 
-  .article {
+  .post {
     min-height: calc(100vh - 130px);
   }
 }
 
 @media (max-width: 700px) {
-  .article pre code {
+  .post pre code {
     border-radius: 0px;
     margin-left: calc((var(--spacing) * -1) - 10px);
     margin-right: calc((var(--spacing) * -1) - 10px);
@@ -79,7 +81,7 @@ body.dark .article .loading i {
 }
 
 @media (min-width: 1080px) {
-  .article {
+  .post {
     padding-bottom: 0px;
   }
 }

@@ -10,7 +10,7 @@ export default () => (
           <h1>Hello 👋</h1>
           <p>
             I'm Frederik. I design and develop software,
-            currently developing an autonomous vessel at <a href='#'>DanaDynamics</a>.
+            currently developing an autonomous vessel <a href='#'>@DanaDynamics</a>.
           </p>
         </header>
         <section class='social'>
