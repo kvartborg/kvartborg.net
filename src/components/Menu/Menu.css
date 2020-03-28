@@ -32,26 +32,32 @@ menu ul {
 menu ul li {
   width: 200px;
   display: inline-block;
-  opacity: .6;
   text-align: center;
 }
 
 menu ul li a {
+  opacity: .6;
   color: var(--black);
+}
+
+menu ul li a span {
+  vertical-align: top;
 }
 
 menu ul li a:focus {
-  padding: 4px 4px;
+  padding: 4px 8px;
+  opacity: 1;
+  color: var(--darker-blue) !important;
+  background: var(--lighter-white);
 }
 
-menu ul li a:hover {
-  color: var(--black);
+.dark menu ul li a:focus {
+  background: var(--dark);
 }
-
 
 menu ul li:before { content: ''; }
 
-menu ul li.active {
+menu ul li.active a {
   opacity: 1;
 }
 

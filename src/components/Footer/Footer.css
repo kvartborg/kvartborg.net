@@ -31,8 +31,7 @@ footer.footer section .social a {
 footer.footer section .social a:focus {
   padding: 0px calc(var(--spacing) / 4);
   margin: 0px;
-  color: var(--blue) !important;
-  box-shadow: none;
+  color: var(--darker-blue) !important;
 }
 
 body.dark footer.footer section .social a {

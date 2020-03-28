@@ -4,6 +4,10 @@ body {
   font-display: auto;
 }
 
+a {
+  transition: all .1s;
+}
+
 .wrap {
   max-width: 760px;
   margin: 0px auto;

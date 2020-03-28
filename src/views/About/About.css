@@ -42,14 +42,12 @@
   color: var(--black);
   font-size: 1.8em;
   margin: 0px;
-  padding: 0px;
+  padding: 4px;
   margin-right: calc(var(--spacing)/4);
 }
 
 .about .social a:focus {
-  box-shadow: none;
-  padding: 0px;
-  color: var(--blue) !important;
+  color: var(--darker-blue) !important;
 }
 
 body.dark .about .social a {
