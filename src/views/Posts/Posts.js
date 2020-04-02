@@ -20,13 +20,13 @@ export default class extends Component {
 
   render (_, { posts }) {
     return (
-      <Layout title='Posts' description='Stuff that i have written, the posts purpose is mostly for my self to remember how i did something in the future.'>
+      <Layout title='Posts' description='Occasionally i write stuff, the posts are mostly for my self to remember how i did something in the future.'>
         <main class='posts'>
           <article class='wrap'>
             <header>
               <h1>Posts ✍️</h1>
               <p>
-                Stuff that i have written, the posts purpose is mostly for my self to remember how i did something in the future.
+                Occasionally i write stuff, the posts are mostly for my self to remember how i did something in the future.
               </p>
             </header>
           </article>

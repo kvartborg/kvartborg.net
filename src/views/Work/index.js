@@ -24,7 +24,7 @@ export default () => (
         <article>
           <header>
             <h3>tag <a href="https://github.com/kvartborg/tag" rel="tag repository" target="_blank"><i class="fab fa-github" /></a></h3>
-            <p>The tag package provides a way to parse a <code><a href="https://github.com/golang/go/blob/0377f061687771eddfe8de78d6c40e17d6b21a39/src/reflect/type.go#L1110" rel="StructTag definition" target="_blank">StructTag</a></code> into a map of key value pairs.</p>
+            <p>The tag package provides a way to parse a <code><a href="https://github.com/golang/go/blob/0377f061687771eddfe8de78d6c40e17d6b21a39/src/reflect/type.go#L1102" rel="StructTag definition" target="_blank">StructTag</a></code> into a map of key value pairs.</p>
           </header>
         </article>
         <article>
