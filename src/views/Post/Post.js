@@ -3,8 +3,6 @@ import Markdown from 'preact-markdown'
 import Layout from 'components/Layout'
 import NotFound from 'views/NotFound'
 import camelcase from 'camelcase'
-import 'katex/dist/katex.css'
-import renderMathInElement from 'katex/dist/contrib/auto-render.js'
 import '@iconfu/svg-inject'
 import './Post.css'
 
@@ -22,27 +20,7 @@ export default class extends Component {
   componentDidUpdate () {
     Prism.highlightAll()
 
-    renderMathInElement(document.body)
-
-    const eqs = document.querySelectorAll('.katex-display')
-
-    for (const eq of eqs) {
-      const children = eq.parentNode.parentNode.childNodes
-
-      let noText = true
-
-      for (const child of children) {
-        if (child.nodeType !== Node.TEXT_NODE) {
-          continue
-        }
-
-        if (child.length > 0) noText = false
-      }
-
-      if (noText) {
-        eq.style.display = 'block'
-      }
-    }
+    this.renderMath()
 
     const imgs = document.querySelectorAll("img")
 
@@ -76,6 +54,42 @@ export default class extends Component {
       el.classList.add("linked")
       window.scrollTo(0, el.offsetTop-40)
     }
+  }
+
+  renderMath() {
+    let mathRenderInterval = null
+    mathRenderInterval = setInterval(() => {
+      if (!window.renderMathInElement) {
+        return
+      }
+
+      try {
+        window.renderMathInElement(document.querySelector("article.post"))
+      } catch(err) {
+        console.error(err)
+      }
+      mathRenderInterval = clearInterval(mathRenderInterval)
+
+      const eqs = document.querySelectorAll('.katex-display')
+
+      for (const eq of eqs) {
+        const children = eq.parentNode.parentNode.childNodes
+
+        let noText = true
+
+        for (const child of children) {
+          if (child.nodeType !== Node.TEXT_NODE) {
+            continue
+          }
+
+          if (child.length > 0) noText = false
+        }
+
+        if (noText) {
+          eq.style.display = 'block'
+        }
+      }
+    }, 1)
   }
 
   async fetchDocument () {

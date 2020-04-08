@@ -1,9 +1,10 @@
-import '@babel/polyfill'
+import regeneratorRuntime from "regenerator-runtime"
 import { h, render } from 'preact'
 import Routes from './Routes'
 import '@quartercastle/style'
 import './base.css'
 import './svg.css'
+
 
 (function setupDarkMode() {
   const theme = localStorage.getItem('theme')
@@ -37,6 +38,7 @@ if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
 }
 
 
+global.regeneratorRuntime = regeneratorRuntime
 global.h = h
 
 const Main = () => (

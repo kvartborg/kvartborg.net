@@ -1,12 +1,11 @@
 import Layout from 'components/Layout'
 import { Link } from 'preact-router'
-import katex from 'katex'
 import './Work.css'
 
 
 
 export default () => (
-  <Layout title="Projects">
+  <Layout title="Work" description="Work experience and projects that i'm currently contributing to or working on">
     <article class='work wrap'>
       <header>
         <h1>Projects 👨‍💻</h1>

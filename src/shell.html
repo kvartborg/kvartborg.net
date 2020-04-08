@@ -6,8 +6,6 @@
     <title>Frederik Kvartborg</title>
     <meta name="description" content="I'm Frederik. I design and develop software, currently developing an autonomous vessel at DanaDynamics.">
     <link rel="manifest" href="/manifest.json">
-    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-KwxQKNj2D0XKEW5O/Y6haRH39PE/xry8SAoLbpbCMraqlX7kUP6KHOnrlrtvuJLR" crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/oqz0pmk.css"> -->
     <style>
       :root{
         --white: #f3f4f6;
@@ -51,6 +49,8 @@
   <body>
     <div id='root'></div>
     <script src='/main.js'></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
     <script>
       function loadStyles(styles) {
         styles.forEach(function (style) {
@@ -62,8 +62,10 @@
       }
 
       loadStyles([
+        'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css',
         'https://use.fontawesome.com/releases/v5.0.10/css/all.css',
-        'https://use.typekit.net/oqz0pmk.css'
+        'https://use.typekit.net/oqz0pmk.css',
+
       ])
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119596467-1"></script>
@@ -75,7 +77,6 @@
       gtag('config', 'UA-119596467-1');
     </script>
     <noscript>
-      Please enable JavaScript!
     </noscript>
   </body>
 </html>
