@@ -55,7 +55,7 @@ export default () => (
         </article>
         <article>
           <header>
-            <h3><a href="https://github.com/kvartborg/repositories" rel="quartercastles repositories" target="_blank">See all my repositories</a></h3>
+            <h3><a href="https://github.com/kvartborg?tab=repositories" rel="quartercastles repositories" target="_blank">See all my repositories</a></h3>
             <p>
             </p>
           </header>
@@ -101,7 +101,10 @@ export default () => (
             <h3>Freelance Web Developer</h3>
             <small>April 2012 - September 2014</small>
             <p>
-              I Startet my career out as a freelance web developer.
+              I startet my career out as a freelance web developer.
+              Didn't really know what i was doing at the time, other
+              than i could get cool things to work on the web and earn a
+              bit of money beside my studies.
             </p>
           </header>
         </article>

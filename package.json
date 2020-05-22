@@ -80,6 +80,12 @@
   },
   "now": {
     "type": "docker",
-    "alias": "kvartborg"
+    "alias": "kvartborg",
+    "scale": {
+      "bru1": {
+        "min": 1,
+        "max": 1
+      }
+    }
   }
 }

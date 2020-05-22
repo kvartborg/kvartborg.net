@@ -11,6 +11,14 @@ export default class extends Component {
     this.loadPosts()
   }
 
+  // componentShouldUpdate(_, state) {
+  //   if (document.querySelectorAll('.posts section a').length === 0) {
+  //     return true
+  //   }
+  //
+  //   return document.querySelectorAll('.posts section a').length !== state.posts.length
+  // }
+
   loadPosts = async () => {
     const res = await fetch('/api/docs.json')
     const posts = await res.json()
