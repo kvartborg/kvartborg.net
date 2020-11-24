@@ -56,7 +56,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^1.0.1",
     "file-loader": "^2.0.0",
-    "highlight.js": "^9.15.9",
+    "highlight.js": "^10.1.2",
     "postcss-css-variables": "^0.11.0",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
